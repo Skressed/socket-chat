@@ -1,8 +1,3 @@
-//setting up sockets
-//const express = require('express');
-//const app = express();
-//const server = require('http').createServer(app);
-
 const io = require('socket.io')({
     cors: {
         origin: '*',
@@ -68,7 +63,6 @@ io.on('connection', (socket) => {
     console.log(data);
     io.to(roomName).emit('sendSignal', data);
   })*/
-
 });
 
 io.listen(process.env.PORT || 1010);

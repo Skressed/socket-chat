@@ -15,9 +15,6 @@ import intervals from '../fixtures/time.json'
 
 export default {
   name: 'Calendar',
-  props: {
-    
-  },
   data() {
       return {
         getIntervals: intervals,
@@ -26,10 +23,7 @@ export default {
   },
   methods: {
       signUpForConsultation(interval) {
-        //this needs to be changed
-        //this.userId = 2;
         let time = interval.time;
-        //let client_id = this.userId;
         let time_id = interval.id;
         
         this.socket.emit('signUpForConsult', {time_id: time_id, interval_time: time});

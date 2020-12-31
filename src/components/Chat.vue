@@ -31,9 +31,6 @@ import io from 'socket.io-client';
 
 export default {
   name: 'Chat',
-  props: {
-
-  },
   data() {
     return {
         userMessage: null,
@@ -98,7 +95,7 @@ export default {
           }
       },
       sendMessage() {
-          if ((this.currentRoom)&&(this.userMessage)) {
+          if ((this.currentRoom) && (this.userMessage)) {
             this.socket.emit('message', this.currentRoom, this.userMessage)
             this.userMessage = null;
           }

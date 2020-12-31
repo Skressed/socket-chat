@@ -20,7 +20,7 @@ export default {
     this.socket.on('signUp', (data, id) => {
       this.intervals.push(data.interval_time);
       console.log(id);
-    })
+    });
   }
 }
 </script>
