@@ -1,22 +1,29 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Calendar class="section"/>
+    <Chat class="section"/>
+    <Occupated class="section"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Occupated from './components/Occupated.vue'
+import Calendar from './components/Calendar.vue'
+import Chat from './components/Chat.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Occupated, Calendar, Chat
   }
 }
 </script>
 
 <style>
+p {
+  padding: 0; margin: 0;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -24,5 +31,12 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 99vw;
+}
+
+.section {
+  
 }
 </style>
