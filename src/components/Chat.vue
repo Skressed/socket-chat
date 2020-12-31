@@ -20,7 +20,7 @@
             </div>
           </div>
         </b-card>
-        <video style="width: 400px; height: 400px;"></video>
+        <!--<video style="width: 400px; height: 400px;"></video>-->
     </div>
   </div>
 </template>

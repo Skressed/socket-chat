@@ -27,12 +27,12 @@ export default {
   methods: {
       signUpForConsultation(interval) {
         //this needs to be changed
-        this.userId = 2;
+        //this.userId = 2;
         let time = interval.time;
-        let client_id = this.userId;
+        //let client_id = this.userId;
         let time_id = interval.id;
         
-        this.socket.emit('signUpForConsult', {client_id: client_id, time_id: time_id, interval_time: time});
+        this.socket.emit('signUpForConsult', {time_id: time_id, interval_time: time});
       }
   },
 }

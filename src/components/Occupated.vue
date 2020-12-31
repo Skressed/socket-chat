@@ -10,9 +10,6 @@ import io from 'socket.io-client';
 
 export default {
   name: 'Occupated',
-  props: {
-
-  },
   data() {
     return {
       intervals: [],
@@ -20,9 +17,9 @@ export default {
     }
   },
   created() {
-    this.socket.on('signUp', (data) => {
+    this.socket.on('signUp', (data, id) => {
       this.intervals.push(data.interval_time);
-      console.log(this.intervals);
+      console.log(id);
     })
   }
 }
